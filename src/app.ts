@@ -1,5 +1,5 @@
-const userName = 'Max';
-let age = 30;
+// const userName = 'Max';
+// let age = 30;
 
 // function add(a: number, b: number){
 //     let result;
@@ -34,7 +34,7 @@ activeHobbies.push(...hobbies);
 console.log('activeHobbies' , ...activeHobbies);
 
 const person = {
-    name: 'Max',
+    firstName: 'Max',
     age: 30
 };
 console.log('person' , person);
@@ -49,3 +49,10 @@ const add = (...numbers: number[]) => {
 
 const addedNumbers = add(5, 10, 2, 3.7);
 console.log('addedNumbers' , addedNumbers);
+
+const [hobby1, hobby2, ...remainingHobbies] = hobbies;
+console.log(hobbies, hobby1, hobby2);
+
+const { firstName: userName, age } = person;
+
+console.log(userName, age, person);
